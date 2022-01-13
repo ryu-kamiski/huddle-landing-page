@@ -1,0 +1,59 @@
+@use 'abstracts';
+@use 'resets/resets';
+@use 'resets/globals';
+
+@mixin desktop {
+  @media (min-width: 68em) {
+    @content;
+  }
+}
+
+body {
+  background-color: abstracts.$primary-violet;
+}
+
+@include desktop {
+  body {
+    min-height: 100vh;
+    text-align: left;
+  }
+
+  .content {
+    p {
+      width: min(35em, 60%);
+    }
+  }
+  .container__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3em;
+
+    & .icons {
+      justify-content: end;
+    }
+  }
+}
+
+.illustration {
+ & img {
+   margin: 0 auto;
+ }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: .5em;
+  margin-top: 2em;
+
+  & img {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(1);
+  }
+}
+
+.footer {
+  margin-top: 2em;
+}

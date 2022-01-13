@@ -1,0 +1,110 @@
+@use '../abstracts/colors';
+@use '../abstracts/fonts';
+
+@mixin mobilemax {
+  @media (max-width: 58em) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 58.1em) {
+    @content;
+  }
+}
+
+body {
+  padding: 1.5em;
+}
+
+.header {
+  header {
+    max-width: 10em;
+    margin-bottom: 2.5em;
+  }
+}
+
+.content {
+
+  p + a {
+    margin-top: 1.5em;
+  }
+
+  h1 {
+    margin-top: 2.5em;
+    color: white;
+
+    &::selection {
+      background-color: black;
+    }
+  }
+  p {
+    margin-top: .7em;
+    color: white;
+
+    &::selection {
+      background-color: black;
+    }
+  }
+
+  & > a {
+    display: inline-block;
+    text-decoration: none;
+    padding: .6em 4em .6em 4em;
+    border-radius: 100px;
+    color: colors.$primary-violet;
+    background-color: white;
+
+    &::selection {
+      background-color: black;
+    }
+  }
+}
+
+.footer {
+  p {
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
+
+    &::selection {
+      background-color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: colors.$primary-magenta;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+      &::selection {
+        background-color: black;
+      }
+    }
+  }
+}
+
+@include mobilemax {
+
+  body {
+    background-image: url(../../img/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    text-align: center;
+  }
+}
+
+@include tablet {
+  body {
+    text-align: center;
+    background-image: url(../../img/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}

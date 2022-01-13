@@ -1,0 +1,195 @@
+.content h1 {
+  font-family: font-family(poppins);
+  font-weight: font-weight(bold);
+  font-size: 2rem;
+}
+.content p {
+  font-family: font-family(open-sans);
+  font-weight: font-weight(normal);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  padding: 1.5em;
+}
+
+.header header {
+  max-width: 10em;
+  margin-bottom: 2.5em;
+}
+
+.content p + a {
+  margin-top: 1.5em;
+}
+.content h1 {
+  margin-top: 2.5em;
+  color: white;
+}
+.content h1::selection {
+  background-color: black;
+}
+.content p {
+  margin-top: 0.7em;
+  color: white;
+}
+.content p::selection {
+  background-color: black;
+}
+.content > a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em 4em 0.6em 4em;
+  border-radius: 100px;
+  color: #674baf;
+  background-color: white;
+}
+.content > a::selection {
+  background-color: black;
+}
+
+.footer p {
+  text-align: center;
+  color: white;
+  font-size: 0.75rem;
+}
+.footer p::selection {
+  background-color: black;
+}
+.footer p a {
+  text-decoration: none;
+  color: #e882e8;
+}
+.footer p a:hover, .footer p a:focus {
+  text-decoration: underline;
+}
+.footer p a::selection {
+  background-color: black;
+}
+
+@media (max-width: 58em) {
+  body {
+    background-image: url(../../img/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    text-align: center;
+  }
+}
+@media (min-width: 58.1em) {
+  body {
+    text-align: center;
+    background-image: url(../../img/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+body {
+  background-color: #674baf;
+}
+
+@media (min-width: 68em) {
+  body {
+    text-align: left;
+  }
+
+  .container {
+    min-height: 100vh;
+  }
+
+  .content p {
+    width: min(35em, 60%);
+  }
+
+  .container__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3em;
+  }
+  .container__content .icons {
+    justify-content: end;
+  }
+}
+.illustration img {
+  margin: 0 auto;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 2em;
+}
+.icons img {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(1);
+}
+
+.footer {
+  margin-top: 2em;
+}
+
+/*# sourceMappingURL=style.css.map */

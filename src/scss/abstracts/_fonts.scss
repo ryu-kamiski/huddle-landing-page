@@ -1,0 +1,27 @@
+$font-family: (
+  "poppins": "'Poppins', sans-serif",
+  "open-sans": "'Open Sans', sans-serif"
+);
+$font-weight: (
+  "normal": 400,
+  "bold": 600
+);
+
+@mixin font-family($font-name) {
+  @include map-get($font-family, $font-name);
+}
+@mixin font-weight($weight-name) {
+  @include map-get($font-weigth, $weight-name);
+}
+
+.content {
+  h1 {
+    font-family: font-family(poppins);
+    font-weight: font-weight(bold);
+    font-size: 2rem;
+  }
+  p {
+    font-family: font-family(open-sans);
+    font-weight: font-weight(normal);
+  }
+}
