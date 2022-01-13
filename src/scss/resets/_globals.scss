@@ -19,8 +19,12 @@ body {
 
 .header {
   header {
-    max-width: 10em;
+    width: 100%;
     margin-bottom: 2.5em;
+
+    & img {
+      width: 10em;
+    }
   }
 }
 
@@ -54,6 +58,11 @@ body {
     border-radius: 100px;
     color: colors.$primary-violet;
     background-color: white;
+
+    &:hover {
+      background-color: colors.$primary-magenta;
+      color: white;
+    }
 
     &::selection {
       background-color: black;

@@ -14,23 +14,35 @@ body {
 
 @include desktop {
   body {
-    min-height: 100vh;
     text-align: left;
   }
 
   .content {
+    h1 {
+      margin-top: 0;
+    }
     p {
       width: min(35em, 60%);
     }
   }
   .container__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3em;
 
+    & .illustration {
+      & img {
+        width: 100%;
+      }
+    }
+
     & .icons {
-      justify-content: end;
+      justify-content: flex-start;
+
+      & a img:hover {
+        filter: invert(0);
+        color: abstracts.$primary-magenta;
+      }
     }
   }
 }
